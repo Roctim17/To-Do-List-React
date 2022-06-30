@@ -1,7 +1,16 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../firebase.init';
 
 const Navbar = () => {
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+    }
+
     const menuItems = <>
         <li><Link to="/CompletedTasks">Completed Tasks</Link></li>
         <li><Link to="/ToDo">To-Do</Link></li>
@@ -20,7 +29,7 @@ const Navbar = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                    <Link to="/" className="btn btn-ghost normal-case text-xl">To-Do List</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
@@ -28,7 +37,12 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* <a to="/" className="btn">Get started</a> */}
+                    {/* {user ? <button className="btn btn-ghost" onClick={logout}>Sign Out</button> : <Link to="/login">Login</Link>} */}
+                    <>{user ? <div onClick={logout} className="avatar online">
+                        <div className="w-8 rounded-full bg-neutral-focus text-neutral-content">
+                            <img src={user.photoURL || ('https://api.lorem.space/image/face?hash=28212')} alt='' />
+                        </div>
+                    </div> : <Link to="/login">Login</Link>}</>
                 </div>
             </div>
         </div>
