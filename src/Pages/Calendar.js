@@ -1,6 +1,7 @@
 import React from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import Footer from './Footer';
 
 const Calendar = () => {
     return (
@@ -12,8 +13,9 @@ const Calendar = () => {
                     </div>
                 </div>
             </div>
-
+            <Footer></Footer>
         </div >
+
     );
 };
 
