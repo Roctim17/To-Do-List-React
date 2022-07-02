@@ -33,7 +33,7 @@ const ToDo = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.deletedCount) {
-                    toast.success(`Task Deleted`);
+                    toast.success(`Deleted`);
                     refetch();
                 }
             });
@@ -62,7 +62,7 @@ const ToDo = () => {
                     .then((res) => res.json())
                     .then((data) => {
                         if (data.modifiedCount) {
-                            toast.success("Task Complete", { id: 19, position: "top-right" });
+                            toast.success("Added Successfully", { id: 19, position: "top-right" });
                             refetch();
                         }
                     });

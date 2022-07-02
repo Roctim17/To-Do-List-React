@@ -16,14 +16,14 @@ const EditTaskModal = ({ update, setModalShow, refetch }) => {
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.modifiedCount) {
-                        toast.success("Task Updated", { id: 23, position: "top-right" });
+                        toast.success("Updated Done", { id: 23, position: "top-right" });
                         setModalShow(null);
                         refetch();
 
                     }
                 });
         } else {
-            toast.error("Nothing will Changed", { id: 12, position: "top-right" });
+            toast.error("Not Update Yet", { id: 12, position: "top-right" });
         }
     };
     console.log(setTask)

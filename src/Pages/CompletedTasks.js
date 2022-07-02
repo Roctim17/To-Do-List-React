@@ -25,7 +25,7 @@ const CompletedTasks = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.deletedCount) {
-                    toast.success(`Task Deleted`);
+                    toast.success(`Deleted `);
                     refetch();
                 }
             });
