@@ -24,7 +24,7 @@ const ToDo = () => {
     }
 
     const deleteTask = (_id) => {
-        fetch(`http://localhost:5000/addtask/${_id}`, {
+        fetch(`https://red-crown-02976.herokuapp.com/addtask/${_id}`, {
             method: "DELETE",
             headers: {
                 "content-type": "application/json",
@@ -41,18 +41,18 @@ const ToDo = () => {
 
     const updateTask = (_id) => {
         setModalShow(true);
-        fetch(`http://localhost:5000/edittask/${_id}`)
+        fetch(`https://red-crown-02976.herokuapp.com/edittask/${_id}`)
             .then((res) => res.json())
             .then((data) => setUpdatingTask(data));
     };
 
     const CompleteTask = (_id) => {
-        fetch(`http://localhost:5000/complete/${_id}`)
+        fetch(`https://red-crown-02976.herokuapp.com/complete/${_id}`)
             .then((res) => res.json())
             .then((data) => {
                 setOneTask(data);
                 const tasks = { oneTask };
-                fetch(`http://localhost:5000/completed-task/${_id}`, {
+                fetch(`https://red-crown-02976.herokuapp.com/completed-task/${_id}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json",

@@ -6,7 +6,7 @@ const EditTaskModal = ({ update, setModalShow, refetch }) => {
     const updatingTask = (event) => {
         const _id = update._id;
         if (task) {
-            fetch(`http://localhost:5000/edit-task/${_id}`, {
+            fetch(`https://red-crown-02976.herokuapp.com/edit-task/${_id}`, {
                 method: "PATCH",
                 headers: {
                     "content-type": "application/json",

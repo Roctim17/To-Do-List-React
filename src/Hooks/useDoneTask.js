@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 
 const useDoneTask = () => {
     const { isLoading, data, refetch } = useQuery("completedtask", () =>
-        fetch("http://localhost:5000/completed-task", {
+        fetch("https://red-crown-02976.herokuapp.com/completed-task", {
             method: "GET",
         }).then((res) => res.json())
     );

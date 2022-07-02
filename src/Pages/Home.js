@@ -9,7 +9,7 @@ const Home = () => {
     // const [user] = useAuthState(auth);
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/addtask`;
+        const url = `https://red-crown-02976.herokuapp.com/addtask`;
         fetch(url, {
             method: 'POST',
             headers: {

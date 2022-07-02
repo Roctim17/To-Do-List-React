@@ -16,7 +16,7 @@ const CompletedTasks = () => {
     }, [complete, refetch]);
 
     const deleteTask = (_id) => {
-        fetch(`http://localhost:5000/addtask/${_id}`, {
+        fetch(`https://red-crown-02976.herokuapp.com/addtask/${_id}`, {
             method: "DELETE",
             headers: {
                 "content-type": "application/json",
