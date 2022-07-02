@@ -31,7 +31,7 @@ const Signup = () => {
     }
 
     if (user || googleUser) {
-        navigate('/appointment')
+        navigate('/')
     }
 
     const onSubmit = async data => {

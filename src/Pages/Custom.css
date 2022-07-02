@@ -1,0 +1,35 @@
+.single-todo,
+.comppleted-task {
+    width: 80%;
+    margin: auto;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-btn {
+    display: none;
+}
+
+.App {
+    width: 70%;
+    margin: auto;
+
+}
+
+@media only screen and (max-width:688px) {
+
+    .single-todo,
+    .comppleted-task,
+    .App {
+        width: 100%;
+        margin: auto;
+    }
+
+    .home-btn {
+        display: block;
+    }
+
+}
