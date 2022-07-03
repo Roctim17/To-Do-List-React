@@ -24,8 +24,16 @@ function App() {
           </RequireAuth>
 
         }></Route>
-        <Route path='/CompletedTasks' element={<CompletedTasks></CompletedTasks>}></Route>
-        <Route path='/ToDo' element={<ToDo></ToDo>}></Route>
+        <Route path='/CompletedTasks' element={
+          <RequireAuth>
+            <CompletedTasks></CompletedTasks>
+          </RequireAuth>
+        }></Route>
+        <Route path='/ToDo' element={
+          <RequireAuth>
+            <ToDo></ToDo>
+          </RequireAuth>
+        }></Route>
         <Route path='/Calendar' element={<Calendar></Calendar>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>

@@ -70,7 +70,7 @@ const ToDo = () => {
         //
     };
 
-
+    console.log(allTasks)
     return (
         <div>
 
