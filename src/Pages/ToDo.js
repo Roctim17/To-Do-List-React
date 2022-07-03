@@ -76,12 +76,13 @@ const ToDo = () => {
 
             <div className="single-todo">
                 <div className="space-y-3 ">
+                    <p className='font-bold pb-5 text-green-500'>My Recently added TO DO List</p>
                     {allTasks.map(
                         (task, index) =>
                             task.complete || (
                                 <div key={task._id} className="">
 
-                                    <div className="flex flex-col lg:flex-row  items-center  text-black w-full gap-3 lg:gap-5">
+                                    <div className="flex flex-row lg:flex-row  items-center  text-black w-full gap-3 lg:gap-5 px-3">
                                         <input
                                             type="radio" name="radio-1"
                                             onClick={() => CompleteTask(task._id)}
